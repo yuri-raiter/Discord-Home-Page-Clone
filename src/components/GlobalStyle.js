@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Raleway', sans-serif;
     }
-
+    
     button {
         outline: none;
         border: none;
