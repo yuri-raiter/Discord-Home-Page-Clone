@@ -29,6 +29,8 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 2;
 `
 
 const Logo = styled.div`
