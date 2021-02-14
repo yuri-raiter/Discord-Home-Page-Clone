@@ -9,6 +9,7 @@ const Banner = () => {
 
     return (
         <StyledBanner>
+            <Background />
             <StyledTexts>
                 <h1>Seu lugar para conversar</h1>
                 <p>Não importa se você faz parte de um clube escolar, uma comunidade artística mundial ou só amigos querendo ficar de boa, o Discord torna mais fácil conversar todo dia e se ver com mais frequência.</p>
@@ -28,28 +29,31 @@ const Banner = () => {
 }
 
 const StyledBanner = styled.div`
-    width: 100vw;
-    min-height: 630px;
-    background: linear-gradient(to bottom, #2A5EE8, #638BFB);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
+    min-height: 540px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    
     img {
         position: absolute;
         bottom: 0;
     }
 `
 
+const Background = styled.div`
+    width: 100vw;
+    height: 620px;
+    background: linear-gradient(to bottom, #2A5EE8, #638BFB);
+    position: absolute;
+    top: -80px;
+    z-index: -3;
+`
+
 const StyledTexts = styled.div`
     text-align: center;
     width: 800px;
     color: #fff;
-    margin-top: 4.5rem;
 
     h1 {
         font-size: 50px;

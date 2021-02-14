@@ -23,14 +23,11 @@ const Nav = () => {
 }
 
 const StyledNav = styled.nav`
-    min-height: 8vh;
     min-height: 80px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 2;
 `
 
 const Logo = styled.div`

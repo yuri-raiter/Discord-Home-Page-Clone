@@ -1,7 +1,9 @@
 import React from 'react'
 
-import styled from 'styled-components'
 import section1_img from '../../img/section1_img.svg'
+import styled from 'styled-components'
+
+import { StyledSection, StyledTexts } from './reusableStyles'
 
 
 const Section1 = () => {
@@ -16,32 +18,10 @@ const Section1 = () => {
     )
 }
 
-const StyledSection1 = styled.div`
-    margin-top: 550px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8rem 0;
+const StyledSection1 = styled(StyledSection)`
 
     img {
         margin-right: 10%;
-        width: 60%;
-    }
-`
-
-const StyledTexts = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    h2 {
-        font-size: 47px;
-        margin-bottom: 1.5rem;
-    }
-
-    p {
-        font-size: 1.1rem;
-        font-weight: 500;
-        line-height: 2rem;
     }
 `
 
