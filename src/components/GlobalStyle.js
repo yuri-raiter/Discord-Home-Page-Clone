@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Raleway', sans-serif;
     }
+
+    body {
+        overflow-x: hidden;
+    }
     
     button {
         outline: none;

@@ -20,7 +20,6 @@ const Section2 = () => {
 }
 
 const StyledSection2 = styled(StyledSection)`
-    //margin-top: 120px;
     position: relative;
 
     img {
