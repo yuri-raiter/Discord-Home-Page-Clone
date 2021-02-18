@@ -9,14 +9,14 @@ const Footer = () => {
         <StyledFooter>
             <Background />
             <FirstPart>
-                <LinkColumn>
+                <LinksColumn>
                     <h3>Your place to talk</h3>
                     <ion-icon name="logo-twitter"></ion-icon>
                     <ion-icon name="logo-instagram"></ion-icon>
                     <ion-icon name="logo-facebook"></ion-icon>
                     <ion-icon name="logo-youtube"></ion-icon>
-                </LinkColumn>
-                <LinkColumn>
+                </LinksColumn>
+                <LinksColumn>
                     <span>Product</span>
                     <p>Download</p>
                     <p>Why Discord</p>
@@ -24,16 +24,16 @@ const Footer = () => {
                     <p>College</p>
                     <p>Nitro</p>
                     <p>Status</p>
-                </LinkColumn>
-                <LinkColumn>
+                </LinksColumn>
+                <LinksColumn>
                     <span>Company</span>
                     <p>About</p>
                     <p>Jobs</p>
                     <p>Branding</p>
                     <p>Newsroom</p>
                     <p>Store</p>
-                </LinkColumn>
-                <LinkColumn>
+                </LinksColumn>
+                <LinksColumn>
                     <span>Resources</span>
                     <p>Support</p>
                     <p>Safety</p>
@@ -45,15 +45,15 @@ const Footer = () => {
                     <p>Open Source</p>
                     <p>Security</p>
                     <p>Moderation</p>
-                </LinkColumn>
-                <LinkColumn>
+                </LinksColumn>
+                <LinksColumn>
                     <span>Policies</span>
                     <p>Terms</p>
                     <p>Privacy</p>
                     <p>Guidelines</p>
                     <p>Acknowledgements</p>
                     <p>Licenses</p>
-                </LinkColumn>
+                </LinksColumn>
             </FirstPart>
             <SecondPart>
                 <Logo/>
@@ -84,7 +84,7 @@ const FirstPart = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 5rem 1rem;
-    border-bottom: 1px solid #4F80C9;
+    border-bottom: 1px solid #7289D4;
     width: 100%;
     
     span {
@@ -101,7 +101,7 @@ const FirstPart = styled.div`
     }
 `
 
-const LinkColumn = styled.div`
+const LinksColumn = styled.div`
     h3 {
         color: #7289D4;
         font-size: 1.8rem;
