@@ -11,8 +11,8 @@ const Section1 = () => {
         <StyledSection1>
             <img src={section1_img} alt=""/>
             <StyledTexts>
-                <h2>Ambientes controlados por convites, com muito espaço pra conversar</h2>
-                <p>Os servidores Discord são organizados em canais com tópicos para vocês colaborarem, compartilharem ou simplesmente falarem do dia sem entupir um chat geral.</p>
+                <h2>An invite-only place with plenty of room to talk</h2>
+                <p>Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.</p>
             </StyledTexts>
         </StyledSection1>
     )

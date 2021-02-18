@@ -11,8 +11,8 @@ const Section3 = () => {
         <StyledSection3>
             <img src={section3_img} alt=""/>
             <StyledTexts>
-                <h2>Para poucos e para muitos</h2>
-                <p>Organize uma comunidade de qualquer tamanho com ferramentas de moderação e acesso personalizado a membros. Dê poderes especiais aos membros, monte canais privados e muito mais.</p>
+                <h2>From a few to a fandom</h2>
+                <p>Get a community of any size running with moderation tools and custom member access. Give members special powers, set up private channels, and more.</p>
             </StyledTexts>
         </StyledSection3>
     )

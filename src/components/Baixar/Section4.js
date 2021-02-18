@@ -13,18 +13,18 @@ const Section4 = () => {
         <StyledSection4>
             <Background />
             <Texts>
-                <h2>Tecnologia de conexão confiável</h2>
-                <p>Voz e vídeo de baixa latência, para você conversar como se estivesse na mesma sala. Dê um joinha por vídeo, veja amigos transmitirem a jogatina do dia ou junte uma galera pra desenhar na tela compartilhada.</p>
+                <h2>Reliable tech for staying close</h2>
+                <p>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</p>
             </Texts>
             <img src={section4_img} alt=""/>
             <BottomTitle>
-                <h3>Vamos começar sua jornada?</h3>
+                <h3>Ready to start your journey?</h3>
                 <img src={section4_img2} alt=""/>
             </BottomTitle>
             <ButtonWrapper>
                 <DownloadButton>
                     <ion-icon name="download-outline" />
-                    Baixar para Windows
+                    Download for Windows
                 </DownloadButton>
             </ButtonWrapper>
         </StyledSection4>
@@ -57,8 +57,8 @@ const Background = styled.div`
 
 const BottomTitle = styled.div`
     position: relative;
-    width: 520px;
-    margin-bottom: 2rem;
+    width: 530px;
+    margin-bottom: 2.5rem;
 
     h3 {
         font-size: 1.8rem;

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import GlobalStyle from './components/GlobalStyle'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 import Baixar from './pages/Baixar'
 
@@ -13,6 +14,7 @@ const App = () => {
       <GlobalStyle />
       <Nav />
       <Baixar />
+      <Footer />
     </StyledApp>
   );
 }

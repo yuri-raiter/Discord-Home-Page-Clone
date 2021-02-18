@@ -1,23 +1,21 @@
 import React from 'react'
 
 import styled from 'styled-components'
+import Logo from './Logo'
 
 const Nav = () => {
 
     return (
         <StyledNav>
-            <Logo>
-                <ion-icon name="logo-discord"/>
-                <h2>Discord</h2>
-            </Logo>
+            <Logo />
             <List>
-                <li><a href="/">Baixar</a></li>
-                <li><a href="/">Por que usar o Discord?</a></li>
+                <li><a href="/">Download</a></li>
+                <li><a href="/">Why Discord?</a></li>
                 <li><a href="/">Nitro</a></li>
-                <li><a href="/">Segurança</a></li>
-                <li><a href="/">Suporte</a></li>
+                <li><a href="/">Safety</a></li>
+                <li><a href="/">Suport</a></li>
             </List>
-            <Button>Entrar</Button>
+            <Button>Login</Button>
         </StyledNav>
     )
 }
@@ -28,22 +26,6 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-`
-
-const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    color: #fff;
-
-    ion-icon {
-        font-size: 2.3rem;
-        margin-right: 0.3rem;
-    }
-
-    h2 {
-        text-transform: uppercase;
-        font-size: 1.2rem;
-    }
 `
 
 const List = styled.ul`

@@ -14,14 +14,14 @@ const Banner = () => {
         <StyledBanner>
             <Background />
             <StyledTexts>
-                <h1>Seu lugar para conversar</h1>
-                <p>Não importa se você faz parte de um clube escolar, uma comunidade artística mundial ou só amigos querendo ficar de boa, o Discord torna mais fácil conversar todo dia e se ver com mais frequência.</p>
+                <h1>Your place to talk</h1>
+                <p>Whether you’re part of a school club, gaming group, worldwide art community, or just a handful of friends that want to spend time together, Discord makes it easy to talk every day and hang out more often.</p>
                 <ButtonWrapper>
                     <StyledDownloadButton>
                         <ion-icon name="download-outline" />
-                        Baixar para Windows
+                        Download for Windows
                     </StyledDownloadButton>
-                    <StyledTextButton>Abra o Discord no seu navegador</StyledTextButton>
+                    <StyledTextButton>Open Discord in your Browser</StyledTextButton>
                 </ButtonWrapper>
             </StyledTexts>
             <BannerImage1 src={banner_img1} alt=""/>

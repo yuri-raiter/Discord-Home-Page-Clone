@@ -11,8 +11,8 @@ const Section2 = () => {
         <StyledSection2>
             <Background />
             <StyledTexts>
-                <h2>Aqui é fácil se encontrar</h2>
-                <p>Entre no canal de voz quando estiver à toa. Amigos no mesmo servidor podem te ver e entrar imediatamente, sem nem ter que fazer a chamada.</p>
+                <h2>Where hanging out is easy</h2>
+                <p>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</p>
             </StyledTexts>
             <img src={section2_img} alt=""/>
         </StyledSection2>
