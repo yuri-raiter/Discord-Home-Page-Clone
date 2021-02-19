@@ -42,6 +42,10 @@ const List = styled.ul`
             font-weight: 700;
             font-size: 15px;
             color: #fff;
+
+            &:hover {
+                border-bottom: 1px solid #fff;
+            }
         }
     }
 `
