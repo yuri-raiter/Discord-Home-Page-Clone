@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
     body {
         overflow-x: hidden;
     }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
     
     button {
         outline: none;

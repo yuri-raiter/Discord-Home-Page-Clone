@@ -3,17 +3,21 @@ import React from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
 
+import { Link } from 'react-router-dom'
+
 const Nav = () => {
 
     return (
         <StyledNav>
-            <Logo />
+            <Link to="/">
+                <Logo />
+            </Link>
             <List>
-                <li><a href="/">Download</a></li>
-                <li><a href="/">Why Discord?</a></li>
-                <li><a href="/">Nitro</a></li>
-                <li><a href="/">Safety</a></li>
-                <li><a href="/">Suport</a></li>
+                <li><Link to="/download">Download</Link></li>
+                <li><Link to="/">Why Discord?</Link></li>
+                <li><Link to="/">Nitro</Link></li>
+                <li><Link to="/">Safety</Link></li>
+                <li><Link to="/">Suport</Link></li>
             </List>
             <Button>Login</Button>
         </StyledNav>
@@ -38,7 +42,6 @@ const List = styled.ul`
         }
 
         a {
-            text-decoration: none;
             font-weight: 700;
             font-size: 15px;
             color: #fff;
