@@ -1,6 +1,6 @@
 import React from 'react'
 
-import section3_img from '../../img/section3_img.svg'
+import section3_img from '../../img/Home/section3_img.svg'
 import styled from 'styled-components'
 
 import { StyledSection, StyledTexts } from './reusableStyles'

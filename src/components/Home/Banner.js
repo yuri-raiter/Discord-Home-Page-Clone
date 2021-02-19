@@ -1,9 +1,9 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import banner_img1 from '../../img/banner_img1.svg'
-import banner_img2 from '../../img/banner_img2.svg'
-import banner_img3 from '../../img/banner_img3.svg'
+import banner_img1 from '../../img/Home/banner_img1.svg'
+import banner_img2 from '../../img/Home/banner_img2.svg'
+import banner_img3 from '../../img/Home/banner_img3.svg'
 
 import { ButtonWrapper, StyledDownloadButton, StyledTextButton} from '../GlobalReusableStyles'
 

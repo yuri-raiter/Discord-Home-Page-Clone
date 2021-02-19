@@ -1,13 +1,16 @@
 import React from 'react'
 
-const Home = () => {
+import Banner from '../components/DownloadPage/Banner'
+import Section from '../components/DownloadPage/Section'
+
+
+const Download = () => {
     return (
         <div>
-            <h2>Download</h2>
+            <Banner />
+            <Section />
         </div>
     )
 }
 
-
-
-export default Home
+export default Download

@@ -75,7 +75,6 @@ const Background = styled.div`
     height: 100%;
     background: #23272A;
     position: absolute;
-    top: 0;
     margin-left: calc(50% - 50vw);
     z-index: -1;
 `
