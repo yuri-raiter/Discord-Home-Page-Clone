@@ -89,6 +89,8 @@ const FirstPart = styled.div`
 `
 
 const Social = styled.div`
+    margin-right: 2rem;
+
     h3 {
         color: #7289D4;
         font-size: 1.8rem;
@@ -103,10 +105,6 @@ const Social = styled.div`
         &:nth-child(-n + 4) {
             margin-right: 1.5rem;
         }
-    }
-
-    &:nth-child(1) {
-        margin-right: 2rem;
     }
 `
 
