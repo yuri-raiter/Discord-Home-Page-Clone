@@ -9,13 +9,13 @@ const Footer = () => {
         <StyledFooter>
             <Background />
             <FirstPart>
-                <LinksColumn>
+                <Social>
                     <h3>Your place to talk</h3>
                     <ion-icon name="logo-twitter"></ion-icon>
                     <ion-icon name="logo-instagram"></ion-icon>
                     <ion-icon name="logo-facebook"></ion-icon>
                     <ion-icon name="logo-youtube"></ion-icon>
-                </LinksColumn>
+                </Social>
                 <LinksColumn>
                     <span>Product</span>
                     <p>Download</p>
@@ -37,6 +37,7 @@ const Footer = () => {
                     <span>Resources</span>
                     <p>Support</p>
                     <p>Safety</p>
+                    <p>Blog</p>
                     <p>Feedback</p>
                     <p>Partners</p>
                     <p>Verification</p>
@@ -82,25 +83,12 @@ const Background = styled.div`
 const FirstPart = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 5rem 1rem;
+    padding: 5rem 3rem 5rem 1rem;
     border-bottom: 1px solid #7289D4;
     width: 100%;
-    
-    span {
-        color: #4F80C9;
-    }
-
-    p {
-        color: #fff;
-        margin-top: 1rem;
-    }
-
-    span, p {
-        font-size: 0.9rem;
-    }
 `
 
-const LinksColumn = styled.div`
+const Social = styled.div`
     h3 {
         color: #7289D4;
         font-size: 1.8rem;
@@ -115,6 +103,26 @@ const LinksColumn = styled.div`
         &:nth-child(-n + 4) {
             margin-right: 1.5rem;
         }
+    }
+
+    &:nth-child(1) {
+        margin-right: 2rem;
+    }
+`
+
+const LinksColumn = styled.div`
+
+    span {
+        color: #4F80C9;
+    }
+
+    p {
+        color: #fff;
+        margin-top: 1rem;
+    }
+
+    span, p {
+        font-size: 0.9rem;
     }
 `
 
