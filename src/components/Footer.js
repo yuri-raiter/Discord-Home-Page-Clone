@@ -18,42 +18,42 @@ const Footer = () => {
                 </Social>
                 <LinksColumn>
                     <span>Product</span>
-                    <p>Download</p>
-                    <p>Why Discord</p>
-                    <p>Inspiration</p>
-                    <p>College</p>
-                    <p>Nitro</p>
-                    <p>Status</p>
+                    <a href="/">Download</a>
+                    <a href="/">Why Discord</a>
+                    <a href="/">Inspiration</a>
+                    <a href="/">College</a>
+                    <a href="/">Nitro</a>
+                    <a href="/">Status</a>
                 </LinksColumn>
                 <LinksColumn>
                     <span>Company</span>
-                    <p>About</p>
-                    <p>Jobs</p>
-                    <p>Branding</p>
-                    <p>Newsroom</p>
-                    <p>Store</p>
+                    <a href="/">About</a>
+                    <a href="/">Jobs</a>
+                    <a href="/">Branding</a>
+                    <a href="/">Newsroom</a>
+                    <a href="/">Store</a>
                 </LinksColumn>
                 <LinksColumn>
                     <span>Resources</span>
-                    <p>Support</p>
-                    <p>Safety</p>
-                    <p>Blog</p>
-                    <p>Feedback</p>
-                    <p>Partners</p>
-                    <p>Verification</p>
-                    <p>Developers</p>
-                    <p>StreamKit</p>
-                    <p>Open Source</p>
-                    <p>Security</p>
-                    <p>Moderation</p>
+                    <a href="/">Support</a>
+                    <a href="/">Safety</a>
+                    <a href="/">Blog</a>
+                    <a href="/">Feedback</a>
+                    <a href="/">Partners</a>
+                    <a href="/">Verification</a>
+                    <a href="/">Developers</a>
+                    <a href="/">StreamKit</a>
+                    <a href="/">Open Source</a>
+                    <a href="/">Security</a>
+                    <a href="/">Moderation</a>
                 </LinksColumn>
                 <LinksColumn>
                     <span>Policies</span>
-                    <p>Terms</p>
-                    <p>Privacy</p>
-                    <p>Guidelines</p>
-                    <p>Acknowledgements</p>
-                    <p>Licenses</p>
+                    <a href="/">Terms</a>
+                    <a href="/">Privacy</a>
+                    <a href="/">Guidelines</a>
+                    <a href="/">Acknowledgements</a>
+                    <a href="/">Licenses</a>
                 </LinksColumn>
             </FirstPart>
             <SecondPart>
@@ -109,17 +109,23 @@ const Social = styled.div`
 `
 
 const LinksColumn = styled.div`
+    display: flex;
+    flex-direction: column;
 
     span {
         color: #4F80C9;
     }
 
-    p {
+    a {
         color: #fff;
         margin-top: 1rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
-    span, p {
+    span, a {
         font-size: 0.9rem;
     }
 `
