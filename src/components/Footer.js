@@ -16,45 +16,47 @@ const Footer = () => {
                     <ion-icon name="logo-facebook"></ion-icon>
                     <ion-icon name="logo-youtube"></ion-icon>
                 </Social>
-                <LinksColumn>
-                    <span>Product</span>
-                    <a href="/">Download</a>
-                    <a href="/">Why Discord</a>
-                    <a href="/">Inspiration</a>
-                    <a href="/">College</a>
-                    <a href="/">Nitro</a>
-                    <a href="/">Status</a>
-                </LinksColumn>
-                <LinksColumn>
-                    <span>Company</span>
-                    <a href="/">About</a>
-                    <a href="/">Jobs</a>
-                    <a href="/">Branding</a>
-                    <a href="/">Newsroom</a>
-                    <a href="/">Store</a>
-                </LinksColumn>
-                <LinksColumn>
-                    <span>Resources</span>
-                    <a href="/">Support</a>
-                    <a href="/">Safety</a>
-                    <a href="/">Blog</a>
-                    <a href="/">Feedback</a>
-                    <a href="/">Partners</a>
-                    <a href="/">Verification</a>
-                    <a href="/">Developers</a>
-                    <a href="/">StreamKit</a>
-                    <a href="/">Open Source</a>
-                    <a href="/">Security</a>
-                    <a href="/">Moderation</a>
-                </LinksColumn>
-                <LinksColumn>
-                    <span>Policies</span>
-                    <a href="/">Terms</a>
-                    <a href="/">Privacy</a>
-                    <a href="/">Guidelines</a>
-                    <a href="/">Acknowledgements</a>
-                    <a href="/">Licenses</a>
-                </LinksColumn>
+                <Links>
+                    <LinksColumn>
+                        <span>Product</span>
+                        <a href="/">Download</a>
+                        <a href="/">Why Discord</a>
+                        <a href="/">Inspiration</a>
+                        <a href="/">College</a>
+                        <a href="/">Nitro</a>
+                        <a href="/">Status</a>
+                    </LinksColumn>
+                    <LinksColumn>
+                        <span>Company</span>
+                        <a href="/">About</a>
+                        <a href="/">Jobs</a>
+                        <a href="/">Branding</a>
+                        <a href="/">Newsroom</a>
+                        <a href="/">Store</a>
+                    </LinksColumn>
+                    <LinksColumn>
+                        <span>Resources</span>
+                        <a href="/">Support</a>
+                        <a href="/">Safety</a>
+                        <a href="/">Blog</a>
+                        <a href="/">Feedback</a>
+                        <a href="/">Partners</a>
+                        <a href="/">Verification</a>
+                        <a href="/">Developers</a>
+                        <a href="/">StreamKit</a>
+                        <a href="/">Open Source</a>
+                        <a href="/">Security</a>
+                        <a href="/">Moderation</a>
+                    </LinksColumn>
+                    <LinksColumn>
+                        <span>Policies</span>
+                        <a href="/">Terms</a>
+                        <a href="/">Privacy</a>
+                        <a href="/">Guidelines</a>
+                        <a href="/">Acknowledgements</a>
+                        <a href="/">Licenses</a>
+                    </LinksColumn>
+                </Links>
             </FirstPart>
             <SecondPart>
                 <Logo/>
@@ -89,7 +91,6 @@ const FirstPart = styled.div`
 `
 
 const Social = styled.div`
-    margin-right: 2rem;
 
     h3 {
         color: #7289D4;
@@ -106,6 +107,11 @@ const Social = styled.div`
             margin-right: 1.5rem;
         }
     }
+`
+const Links = styled.div`
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
 `
 
 const LinksColumn = styled.div`

@@ -25,7 +25,7 @@ const StyledLogo = styled.div`
 
     h2 {
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 `
 
