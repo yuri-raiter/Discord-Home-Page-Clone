@@ -4,29 +4,35 @@ import section4_img from '../../img/Home/section4_img.svg'
 import section4_img2 from '../../img/Home/section4_img2.svg'
 import styled from 'styled-components'
 
-import { StyledSection, StyledTexts } from './reusableStyles'
+import { StyledSection, StyledTexts, Wrapper } from './reusableStyles'
 import { ButtonWrapper, StyledDownloadButton } from '../GlobalReusableStyles'
+import { showUp } from '../../animations'
+import { useShowUp } from '../../useShowUp'
 
 
 const Section4 = () => {
+    const [element, controls] = useShowUp()
+
     return (
         <StyledSection4>
             <Background />
-            <Texts>
-                <h2>Reliable tech for staying close</h2>
-                <p>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</p>
-            </Texts>
-            <img src={section4_img} alt=""/>
-            <BottomTitle>
-                <h3>Ready to start your journey?</h3>
-                <img src={section4_img2} alt=""/>
-            </BottomTitle>
-            <ButtonWrapper>
-                <DownloadButton>
-                    <ion-icon name="download-outline" />
-                    Download for Windows
-                </DownloadButton>
-            </ButtonWrapper>
+            <Wrapper initial="hidden" animate={controls} variants={showUp} ref={element}>
+                <Texts>
+                    <h2>Reliable tech for staying close</h2>
+                    <p>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</p>
+                </Texts>
+                <img src={section4_img} alt=""/>
+                <BottomTitle>
+                    <h3>Ready to start your journey?</h3>
+                    <img src={section4_img2} alt=""/>
+                </BottomTitle>
+                <ButtonWrapper>
+                    <DownloadButton>
+                        <ion-icon name="download-outline" />
+                        Download for Windows
+                    </DownloadButton>
+                </ButtonWrapper>
+            </Wrapper>
         </StyledSection4>
     )
 }

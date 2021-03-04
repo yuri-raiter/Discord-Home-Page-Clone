@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+
 
 export const StyledSection = styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 8rem 0;
 
@@ -25,4 +26,10 @@ export const StyledTexts = styled.div`
         font-weight: 500;
         line-height: 2rem;
     }
+`
+
+export const Wrapper = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `

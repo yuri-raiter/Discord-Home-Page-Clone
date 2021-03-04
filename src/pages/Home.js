@@ -11,14 +11,13 @@ const Home = () => {
     return (
         <div>
             <Banner />
-            <Section1 />
-            <Section2 />
-            <Section3 />
-            <Section4 />
+                <Section1 />
+                <Section2 />
+                <Section3 />
+                <Section4 />
         </div>
     )
 }
-
 
 
 export default Home
