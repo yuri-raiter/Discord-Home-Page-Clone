@@ -27,7 +27,7 @@ export const ButtonWrapper = styled.ul`
         padding: 1rem 2rem;
         border-radius: 2rem;
         cursor: pointer;
-        transition: 0.2s all ease;
+        transition: 0.3s all ease;
 
         &:hover {
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);

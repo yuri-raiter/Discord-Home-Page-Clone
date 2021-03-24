@@ -1,28 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styled from 'styled-components'
 import Logo from './Logo'
 
 import { StyledLogo, ButtonWrapper, StyledDownloadButton } from './GlobalReusableStyles'
+import { sideMenu } from '../animations'
+import { motion } from 'framer-motion'
 
 
-const Nav = () => {  
+const Nav = () => {
+
+    const [isActive, setIsActive] = useState(false)
+
+    const onClick = () => {
+        return setIsActive(!isActive)
+    }
+
     return (
         <StyledNav>
             <a href="/">
-            <StyledLogo>
-                <Logo />
-            </StyledLogo>
-            
+                <StyledLogo>
+                    <Logo />
+                </StyledLogo>
             </a>
-            <MobileMenu>
+            <MobileMenu initial="hidden" animate={isActive ? "visible" : "hidden"} variants={sideMenu}>
                 <TopWrapper>
                     <a href="/">
                         <MobileLogo>
                             <Logo />
                         </MobileLogo>
                     </a>
-                    <ion-icon name="close-sharp"></ion-icon>
+                    <CloseButton onClick={onClick}>
+                        <ion-icon name="close-sharp"></ion-icon>
+                    </CloseButton>
                 </TopWrapper>
                 <List>
                     <HomeLink><a href="/">Home</a></HomeLink>
@@ -32,16 +42,18 @@ const Nav = () => {
                     <li><a href="/">Safety</a></li>
                     <li><a href="/">Suport</a></li>
                 </List>
-                <HamburguerMenuButton>
+                <BottomWrapper>
                     <DownloadButton>
                         <ion-icon name="download-outline" />
                         Download for Windows
                     </DownloadButton>
-                </HamburguerMenuButton>
+                </BottomWrapper>
             </MobileMenu>
             <Wrapper>
                 <Button>Login</Button>
-                <ion-icon name="menu"></ion-icon>
+                <HamburguerIcon onClick={onClick}>
+                    <ion-icon name="menu"></ion-icon>
+                </HamburguerIcon>
             </Wrapper>
         </StyledNav>
     )
@@ -55,7 +67,7 @@ const StyledNav = styled.nav`
     align-items: center;
 `
 
-const MobileMenu = styled.div`
+const MobileMenu = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,7 +83,7 @@ const MobileMenu = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         border-radius: 0.5rem 0 0 0.5rem;
-        padding: 1.3rem 3rem 1.3rem 1.3rem;
+        padding: 1.3rem;
     }
 `
 
@@ -85,20 +97,23 @@ const TopWrapper = styled.div`
         width: 100%;
         padding-bottom: 1.8rem;
         border-bottom: 1px solid #EBEDEF;
-
-        ion-icon {
-            color: #36393F;
-
-            &:nth-child(2) {
-                font-size: 1.5rem;
-            }
-        }
     }
     
 `
 
 const MobileLogo = styled(StyledLogo)`
     color: #36393F;
+`
+
+const CloseButton = styled.div`
+    position: absolute;
+    right: 10px; 
+    cursor: pointer;   
+
+    ion-icon {
+        color: #36393F;
+        font-size: 1.5rem;
+    }
 `
 
 const List = styled.ul`
@@ -132,12 +147,23 @@ const List = styled.ul`
             &:nth-child(-n + 4) { // the first four
                 margin-right: 0;
             }
-        }
 
-         li a {
-            font-weight: 500;
-            font-size: 0.85rem;
-            color: #36393F;
+            &:nth-last-child(-n + 5) {
+                a {
+                    color: #36393F;
+                }
+            }
+
+            &:nth-child(1) {
+                a {
+                    color: #7289D4;
+                }
+            }
+
+            a {
+                font-weight: 500;
+                font-size: 0.85rem;
+            }
         }
     }
 `
@@ -149,21 +175,19 @@ const HomeLink = styled.li`
         display: flex;
         background: #F6F6F6;
         border-radius: 1rem;
-        
-        a:hover {
-            color: #7289D4;
-        }
     }
 `
 
-const HamburguerMenuButton = styled(ButtonWrapper)`
+const BottomWrapper = styled(ButtonWrapper)`
     display: none;
 
     @media (max-width: 1023px) {
         display: flex;
+        flex: 1;
+        align-items: flex-end;
 
         li {
-            padding: 0.3rem 2rem;
+            padding: 0.5rem 2.8rem;
             font-size: 0.8rem;
         }
     }
@@ -171,22 +195,18 @@ const HamburguerMenuButton = styled(ButtonWrapper)`
 
 const DownloadButton = styled(StyledDownloadButton)`
     margin-right: 0;
+    background: #7289DA;
+    color: #fff;
+
+    &:hover {
+        color: #fff;
+        opacity: 0.8;
+    }
 `
 
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
-
-    ion-icon {
-        font-size: 2rem;
-        color: #fff;
-        cursor: pointer;
-        display: none;
-
-        @media (max-width: 1023px) {
-            display: flex;
-        }
-    }
 `
 
 const Button = styled.button`
@@ -205,5 +225,18 @@ const Button = styled.button`
     }
 `
 
+const HamburguerIcon = styled.div`
+    cursor: pointer;
+    
+    ion-icon {
+        font-size: 2rem;
+        color: #fff;
+        display: none;
+
+        @media (max-width: 1023px) {
+            display: flex;
+        }
+    }
+`
 
 export default Nav

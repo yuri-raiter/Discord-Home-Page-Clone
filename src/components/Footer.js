@@ -2,6 +2,7 @@ import React from 'react'
 
 import styled from 'styled-components'
 import Logo from './Logo'
+import { StyledLogo } from './GlobalReusableStyles'
 
 const Footer = () => {
 
@@ -59,7 +60,9 @@ const Footer = () => {
                 </Links>
             </FirstPart>
             <SecondPart>
-                <Logo/>
+                <StyledLogo>
+                    <Logo/>
+                </StyledLogo>
                 <button>Sign up</button>
             </SecondPart>
         </StyledFooter>

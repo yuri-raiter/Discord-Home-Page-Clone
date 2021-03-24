@@ -6,3 +6,14 @@ export const showUp = {
         transition: { duration: 0.5, ease: "easeOut" } 
     }
 }
+
+export const sideMenu = {
+    hidden: { 
+        x: '110%',
+        transition: { duration: 0.3, ease: 'easeOut' }
+    },
+    visible: {
+        x: 0,
+        transition: { duration: 0.3, ease: 'easeOut' }
+    }
+}
