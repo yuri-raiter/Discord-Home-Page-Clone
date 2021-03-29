@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import styled from 'styled-components'
 import Logo from './Logo'
@@ -11,10 +11,19 @@ import { motion } from 'framer-motion'
 const Nav = () => {
 
     const [isActive, setIsActive] = useState(false)
+    const [width, setWidth] = useState(window.innerWidth)
 
     const onClick = () => {
         return setIsActive(!isActive)
     }
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth)
+        window.addEventListener('resize', handleResize)
+
+        if (width > 1023) setIsActive(false)
+
+    }, [width])
 
     return (
         <StyledNav>
@@ -23,7 +32,7 @@ const Nav = () => {
                     <Logo />
                 </StyledLogo>
             </a>
-            <MobileMenu initial="hidden" animate={isActive ? "visible" : "hidden"} variants={sideMenu}>
+            <MobileMenu className={isActive ? 'active' : ''}>
                 <TopWrapper>
                     <a href="/">
                         <MobileLogo>
@@ -65,6 +74,10 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .active {
+        right: 0;
+    }
 `
 
 const MobileMenu = styled(motion.div)`
@@ -74,7 +87,7 @@ const MobileMenu = styled(motion.div)`
 
     @media (max-width: 1023px) {
         position: fixed;
-        right: 0;
+        right: -320px;
         top: 0;
         background: #fff;
         height: 100vh;
@@ -84,6 +97,7 @@ const MobileMenu = styled(motion.div)`
         justify-content: flex-start;
         border-radius: 0.5rem 0 0 0.5rem;
         padding: 1.3rem;
+        transition: all .2s ease-out;
     }
 `
 
