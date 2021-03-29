@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Logo from './Logo'
 
 import { StyledLogo, ButtonWrapper, StyledDownloadButton } from './GlobalReusableStyles'
-import { sideMenu } from '../animations'
 import { motion } from 'framer-motion'
 
 
